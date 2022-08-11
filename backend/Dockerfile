@@ -1,4 +1,8 @@
 FROM golang:1.16 AS build
+
+ENV GOPROXY=https://goproxy.cn
+
+
 WORKDIR /go/src/github.com/org/repo
 COPY . .
 
